@@ -4,14 +4,21 @@
 # by Michael Auderer <mike@silverstone.io>
 # License: WTFPL
 
-# Add necessary repositories
+# Add google chrome
+dnf install -y fedora-workstation-repositories
+dnf config-manager --set-enabled google-chrome
+
+# Add COPR repositories
 dnf copr enable gregw/i3desktop
 
-# Install everything
-dnf install -y i3-gaps rofi nano vim google-chrome ranger w3m calcurse compton \
+# Install yummy packages
+dnf install -y i3-gaps rofi google-chrome-stable nano vim ranger w3m calcurse compton \
 feh arandr i3blocks i3lock rxvt-unicode scrot unar
 
-# Install python packages
+# Install Discord
+flatpak install --from https://flathub.org/repo/appstream/com.discordapp.Discord.flatpakref 
+
+# Install pywal
 pip3 install pywal
 
 # Download fonts
@@ -29,5 +36,4 @@ wget $FONT_PATH/BoldItalic/complete/Hack%20Bold%20Italic%20Nerd%20Font%20Complet
 
 # Regenerate font cache
 fc-cache -f -v
-
 
