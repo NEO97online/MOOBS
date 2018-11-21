@@ -1,4 +1,4 @@
-# Michael's Overly Opinionated Bootstrapping Script
+# Michael's Overly Opinionated Bootstrapping Script (MOOBS)
 
 This script installs all the packages and fonts I like. It works well on a clean 
 install of Fedora 29, otherwise your mileage may vary.
